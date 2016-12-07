@@ -49,8 +49,9 @@ guard :rspec, cmd: 'bundle exec rspec' do
   watch(rspec.spec_files)
 
   watch(/.+\.rb$/)
+  watch(%r{^app/(.+)\.rb}) { |m| "spec/#{m[1]}_spec.rb" }
 end
 
-guard :rubocop, cli: ['-S', '-D'] do
-  watch(/.+\.rb$/)
-end
+# guard :rubocop, cli: ['-S', '-D'] do
+#   watch(/.+\.rb$/)
+# end
