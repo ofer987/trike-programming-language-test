@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+require_relative '../lib/environment'
+
+attempts = ARGV[0]
+expected_total = ARGV[1]
+operands = ARGV[2..-1]
+
+EquationGuesser
+  .new(operands, expected_total)
+  .guess(attempts)
