@@ -3,7 +3,7 @@
 ## Notes
 
 1. This has only been tested with positive integers and the value 0.
-2. Operations that result in division by zero are ignored. They are reported to the log file `log/app.log`. And the results are omitted.
+2. Operations that result in division by zero are ignored. They are reported to the log file `log/app.log`. And the results are omitted. So for example, if 100 guesses are requested, but one of them fails for whatever reason (like division by zero), then only 999 guesses will be displayed and reported.
 
 ## Instructions
 
@@ -40,3 +40,13 @@ Output:
 ```ruby
 EquationGuesser.new(array_of_operands, expected_total).guess(number_of_attempts)
 ```
+
+## Performance
+
+Running the following command:
+
+```shell
+bin/app 1000 324 123 7 6 28 3 19 7 10 32 80
+```
+
+for a thousand guesses for 10 operands, takes **0.38** seconds on my local computer. My computer is *relatively* modest. It is a 2012 MacBook Air (13 inch) with a 1.8 GHz Intel Core i5 processor and 8 GB of RAM. This is far less than the demanded five seconds.
