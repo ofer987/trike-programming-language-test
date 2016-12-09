@@ -18,4 +18,14 @@ RSpec.describe Result do
       end
     end
   end
+
+  context '#to_s' do
+    context "the operation '10 + 3' and expected total 30" do
+      let(:value) { Result.new('10 + 3', 13, 30) }
+
+      it "has string representation '10 + 3 = 13 (-17)'" do
+        expect(value.to_s).to eq('10 + 3 = 13 (-17)')
+      end
+    end
+  end
 end
