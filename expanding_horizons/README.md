@@ -1,24 +1,14 @@
-# ExpandingHorizons
+# Expanding Horizons
 
-**TODO: Add description**
+I decided to implement the second option:
 
-## Installation
+*Take a string on standard input and return the string reversed on standard output.*
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
+## Instructions
 
-  1. Add `expanding_horizons` to your list of dependencies in `mix.exs`:
+Pipe a string to the application by executing:
 
-    ```elixir
-    def deps do
-      [{:expanding_horizons, "~> 0.1.0"}]
-    end
-    ```
-
-  2. Ensure `expanding_horizons` is started before your application:
-
-    ```elixir
-    def application do
-      [applications: [:expanding_horizons]]
-    end
-    ```
+```shell
+echo "!sppAekirT olleH" | mix run
+```
 
