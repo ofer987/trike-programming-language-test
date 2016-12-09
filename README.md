@@ -10,6 +10,6 @@
 
 ### [Problem 3 - Expanding Your Horizons](./expanding_horizons/README.md)
 
-I decided to implement the second option:
+I decided to implement the second option in Elixir:
 
 *Take a string on standard input and return the string reversed on standard output.*
