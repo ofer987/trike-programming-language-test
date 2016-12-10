@@ -8,9 +8,15 @@ defmodule ExpandingHorizons do
     Supervisor.start_link [], strategy: :one_for_one
   end
 
-  defp reverse_print([]), do: :ok
   defp reverse_print([head|tail]) do
-    reverse_print tail
-    IO.write to_string [head]
+    reverse_print([head|tail], [])
+  end
+  defp reverse_print([], reversed) do
+    reversed
+    |> to_string
+    |> IO.write
+  end
+  defp reverse_print([head|tail], reversed) do
+    reverse_print tail, [head] ++ reversed
   end
 end
